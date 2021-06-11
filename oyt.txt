@@ -1,0 +1,1488 @@
+<!DOCTYPE html>
+<html class="hasSidebar hasPageActions hasBreadcrumb conceptual has-default-focus theme-light" data-auth-status-determined="false" data-authenticated="false" data-css-variable-support="true" data-target="docs" dir="ltr" lang="en-us" x-ms-format-detection="none">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <meta content="Latest updates for SQL Server - SQL Server" property="og:title"/>
+  <meta content="website" property="og:type"/>
+  <meta content="https://docs.microsoft.com/en-us/sql/database-engine/install-windows/latest-updates-for-microsoft-sql-server" property="og:url"/>
+  <meta content="A list of the latest cumulative updates and service packs, with build numbers for Microsoft SQL Server." property="og:description"/>
+  <meta content="https://docs.microsoft.com/en-us/media/logos/logo-ms-social.png" property="og:image"/>
+  <meta content="Microsoft Logo" property="og:image:alt"/>
+  <meta content="summary" name="twitter:card"/>
+  <meta content="@docsmsft" name="twitter:site"/>
+  <meta content="light dark" name="color-scheme"/>
+  <meta content="SrinivasSQLMS" name="author"/>
+  <meta content="../../breadcrumb/toc.json" name="breadcrumb_path"/>
+  <meta content="SQL.sql-content" name="depot_name"/>
+  <meta content="A list of the latest cumulative updates and service packs, with build numbers for Microsoft SQL Server." name="description"/>
+  <meta content="d1353d4d-3899-d6cf-e44f-8536c7828335" name="document_id"/>
+  <meta content="de0210cf-386a-f8c8-1157-40cea207ed4b" name="document_version_independent_id"/>
+  <meta content="https://github.com/MicrosoftDocs/sql-docs-pr/blob/fc0bc9260187ccd43eb636fff504042da9a3caf4/docs/database-engine/install-windows/latest-updates-for-microsoft-sql-server.md" name="gitcommit"/>
+  <meta content="en-us" name="locale"/>
+  <meta content="jroth" name="manager"/>
+  <meta content="&gt;= sql-server-2016 || &gt;= sql-server-linux-2017" name="monikerRange"/>
+  <meta content="sql-server-2016" name="monikers"/>
+  <meta content="sql-server-2017" name="monikers"/>
+  <meta content="sql-server-linux-2017" name="monikers"/>
+  <meta content="sql-server-linux-ver15" name="monikers"/>
+  <meta content="sql-server-ver15" name="monikers"/>
+  <meta content="skandi" name="ms.author"/>
+  <meta content="03/29/2021" name="ms.date"/>
+  <meta content="sql" name="ms.prod"/>
+  <meta content="hristins" name="ms.reviewer"/>
+  <meta content="install" name="ms.technology"/>
+  <meta content="conceptual" name="ms.topic"/>
+  <meta content="https://github.com/MicrosoftDocs/sql-docs-pr/blob/live/docs/database-engine/install-windows/latest-updates-for-microsoft-sql-server.md" name="original_content_git_url"/>
+  <meta content="true" name="recommendations"/>
+  <meta content="Conceptual" name="schema"/>
+  <meta content="sql-content" name="search.ms_docsetname"/>
+  <meta content="SQL" name="search.ms_product"/>
+  <meta content="Docs" name="search.ms_sitename"/>
+  <meta content="Docs" name="site_name"/>
+  <meta content="true" name="toc_preview"/>
+  <meta content="MSDocsHeader-DocsSQL" name="uhfHeaderId"/>
+  <meta content="2021-05-10 10:32 PM" name="updated_at"/>
+  <meta content="conceptual" name="page_type"/>
+  <meta content="../../toc.json" name="toc_rel"/>
+  <meta content="https://docs.microsoft.com/pdfstore/en-us/SQL.sql-content/{branchName}{pdfName}" name="pdf_url_template"/>
+  <meta content="479" name="word_count"/>
+  <meta content="sql" name="scope"/>
+  <link href="https://docs.microsoft.com/en-us/sql/database-engine/install-windows/latest-updates-for-microsoft-sql-server" rel="canonical"/>
+  <title>
+   Latest updates for SQL Server - SQL Server | Microsoft Docs
+  </title>
+  <link href="/_themes/docs.theme/master/en-us/_themes/styles/eab32e51.site-ltr.css " rel="stylesheet"/>
+  <script id="msdocs-script">
+   var msDocs = {
+		data: {
+			timeOrigin: Date.now(),
+			contentLocale: 'en-us',
+			contentDir: 'ltr',
+			userLocale: 'en-us',
+			userDir: 'ltr',
+			pageTemplate: 'Conceptual',
+			brand: '',
+			context: {
+
+			},
+			hasBinaryRating: true,
+			hasGithubIssues: true,
+			showFeedbackReport: false,
+			enableTutorialFeedback: false,
+			feedbackSystem: 'GitHub',
+			feedbackGitHubRepo: 'MicrosoftDocs/sql-docs',
+			feedbackProductUrl: 'https://feedback.azure.com/forums/908035-sql-server/',
+			contentGitUrl: 'https://github.com/MicrosoftDocs/sql-docs/blob/live/docs/database-engine/install-windows/latest-updates-for-microsoft-sql-server.md',
+			extendBreadcrumb: true,
+			isEditDisplayable: true,
+			hideViewSource: false,
+			hasPageActions: true,
+			hasBookmark: true,
+			hasShare: true,
+			hasRecommendations: true,
+			contributors: [
+						{ name: "SrinivasSQLMS", url: "https://github.com/SrinivasSQLMS" },
+						{ name: "Hristina-sql", url: "https://github.com/Hristina-sql" },
+						{ name: "MikeRayMSFT", url: "https://github.com/MikeRayMSFT" },
+						{ name: "tmichael-ms", url: "https://github.com/tmichael-ms" },
+						{ name: "DCtheGeek", url: "https://github.com/DCtheGeek" },
+						{ name: "Court72", url: "https://github.com/Court72" },
+						{ name: "atikmapari", url: "https://github.com/atikmapari" },
+						{ name: "MashaMSFT", url: "https://github.com/MashaMSFT" },
+						{ name: "rothja", url: "https://github.com/rothja" },
+						{ name: "markingmyname", url: "https://github.com/markingmyname" },
+						{ name: "v-thepet", url: "https://github.com/v-thepet" },
+						{ name: "bluefooted", url: "https://github.com/bluefooted" }
+],
+		},
+		functions:{}
+	};
+  </script>
+  <script src="https://wcpstatic.microsoft.com/mscc/lib/v2/wcp-consent.js">
+  </script>
+  <script src="https://js.monitor.azure.com/scripts/c/ms.jsll-3.min.js">
+  </script>
+  <script>
+   window.onedsAwa = window.awa; delete window.awa;
+  </script>
+  <script src="/static/third-party/jsll/4.3.4/jsll-4.js">
+  </script>
+  <script crossorigin="anonymous" integrity="sha384-aD4BDeDGeLXLpPK4yKeqtZQa9dv4a/7mQ+4L5vwshIYH1Mc2BrXvHd32iHzYCQy5" nomodule="" src="/static/third-party/bluebird/3.5.0/bluebird.min.js">
+  </script>
+  <script crossorigin="anonymous" integrity="sha384-EQIXrC5K2+7X8nGgLkB995I0/6jfAvvyG1ieZ+WYGxgJHFMD/alsG9fSDWvzb5Y1" nomodule="" src="/static/third-party/fetch/3.0.0/fetch.umd.min.js">
+  </script>
+  <script crossorigin="anonymous" integrity="sha384-1zKzI6ldTVHMU7n0W2HpE/lhHI+UG4D9IIaxbj3kT2UhCWicdTuJkTtnKuu0CQzN" nomodule="" src="/static/third-party/template/1.4.0/template.min.js">
+  </script>
+  <script crossorigin="anonymous" integrity="sha384-vn7xBMtpSTfzaTRWxj0kVq0UcsbBrTOgZ/M1ISHqe1V358elYva+lfiEC+T8jLPc" nomodule="" src="/static/third-party/url/0.5.7/url.min.js">
+  </script>
+  <script src="/_themes/docs.theme/master/en-us/_themes/scripts/8a64e446.index-polyfills.js">
+  </script>
+  <script src="/_themes/docs.theme/master/en-us/_themes/scripts/b198e971.index-docs.js">
+  </script>
+ </head>
+ <body dir="ltr" lang="en-us">
+  <div class="header-holder has-default-focus">
+   <a class="skip-to-main-link has-outline-color-text visually-hidden-until-focused position-fixed has-inner-focus focus-visible top-0 left-0 right-0 has-padding-medium has-text-centered has-body-background-medium" href="#main" tabindex="1">
+    Skip to main content
+   </a>
+   <div class="has-default-focus has-overflow-hidden" id="ignite-banner-holder">
+   </div>
+   <div class="has-default-focus has-overflow-hidden" id="build-banner-holder">
+   </div>
+   <div hidden="" id="cookie-consent-holder">
+   </div>
+   <!-- liquid-tag banners global -->
+   <div data-bi-name="header" id="headerAreaHolder">
+    <header itemscope="itemscope" itemtype="http://schema.org/Organization" role="banner">
+     <div class="nav-bar">
+      <div class="nav-bar-brand">
+       <a aria-label="Microsoft" class="nav-bar-button" href="https://www.microsoft.com" itemprop="url">
+        <div aria-hidden="true" class="nav-bar-logo has-background-image theme-display is-light" itemprop="logo" itemscope="itemscope" role="presentation">
+        </div>
+        <div aria-hidden="true" class="nav-bar-logo has-background-image theme-display is-dark is-high-contrast" itemprop="logo" itemscope="itemscope" role="presentation">
+        </div>
+       </a>
+      </div>
+     </div>
+     <div class="nav-bar border-top is-hidden-mobile">
+     </div>
+    </header>
+   </div>
+   <div class="content-header uhf-container has-padding has-default-focus border-bottom-none" data-bi-name="content-header">
+    <nav aria-label="Breadcrumb" class="breadcrumb-holder has-padding-none has-padding-left-medium-tablet has-padding-right-medium-tablet has-padding-left-none-uhf-tablet has-padding-left-none-uhf-tablet has-padding-none-desktop flex-grow-1" data-bi-name="breadcrumb" itemscope="" itemtype="http://schema.org/BreadcrumbList" role="navigation">
+     <ul class="breadcrumbs" id="page-breadcrumbs">
+     </ul>
+    </nav>
+    <div class="content-header-controls">
+     <button aria-haspopup="true" class="contents-button button" data-bi-name="contents-expand" type="button">
+      <span class="icon">
+       <span aria-hidden="true" class="docon docon-menu">
+       </span>
+      </span>
+      <span class="contents-expand-title">
+       Contents
+      </span>
+     </button>
+     <button aria-controls="action-panel" class="ap-collapse-behavior ap-expanded button" data-bi-name="ap-collapse" type="button">
+      <span class="icon">
+       <span aria-hidden="true" class="docon docon-exit-mode">
+       </span>
+      </span>
+      <span>
+       Exit focus mode
+      </span>
+     </button>
+    </div>
+    <div class="has-padding-none-tablet has-padding-medium font-size-s display-flex justify-content-space-between flex-grow-1 page-action-holder">
+     <ul class="is-hidden-mobile action-list justify-content-flex-start has-flex-justify-content-end-tablet display-flex flex-wrap-wrap flex-grow-1 is-unstyled">
+      <li hidden="">
+       <a class="button is-text has-inner-focus is-small is-icon-only-touch" data-bi-name="language-toggle" id="lang-link" title="Read in English">
+        <span aria-hidden="true" class="icon docon docon-locale-globe" id="lang-link-icon">
+        </span>
+        <span class="is-visually-hidden-touch is-hidden-portrait" id="lang-link-text">
+        </span>
+       </a>
+      </li>
+      <li>
+       <button class="collection button is-text has-inner-focus is-small is-icon-only-touch" data-bi-name="collection" data-list-type="collection" title="Add to collection" type="button">
+        <span aria-hidden="true" class="icon">
+         <span class="docon docon-circle-addition has-text-primary">
+         </span>
+        </span>
+        <span class="collection-status is-visually-hidden-touch is-hidden-portrait">
+         Save
+        </span>
+       </button>
+      </li>
+      <li id="feedback-section-link">
+       <a class="button is-text has-inner-focus is-small is-icon-only-touch" data-bi-name="comments" href="#feedback" title="Send feedback about this page">
+        <span aria-hidden="true" class="icon">
+         <span class="docon docon-comment-lines">
+         </span>
+        </span>
+        <span class="is-visually-hidden-touch is-hidden-portrait">
+         Feedback
+        </span>
+       </a>
+      </li>
+      <li id="contenteditbtn">
+       <a class="button is-text has-inner-focus is-icon-only-touch is-small" data-bi-name="edit" data-original_content_git_url="https://github.com/MicrosoftDocs/sql-docs-pr/blob/live/docs/database-engine/install-windows/latest-updates-for-microsoft-sql-server.md" data-original_content_git_url_template="{repo}/blob/{branch}/docs/database-engine/install-windows/latest-updates-for-microsoft-sql-server.md" data-pr_branch="" data-pr_repo="" href="https://github.com/MicrosoftDocs/sql-docs/blob/live/docs/database-engine/install-windows/latest-updates-for-microsoft-sql-server.md" title="Edit This Document">
+        <span aria-hidden="true" class="icon">
+         <span class="docon docon-edit-outline">
+         </span>
+        </span>
+        <span class="is-visually-hidden-touch is-hidden-portrait">
+         Edit
+        </span>
+       </a>
+      </li>
+      <li>
+       <div class="sharing dropdown has-caret">
+        <button aria-controls="sharing-menu" aria-expanded="false" class="dropdown-trigger button is-text is-fullwidth justify-content-flex-start has-inner-focus is-small is-icon-only-touch" data-bi-name="share" title="Share This Document">
+         <span aria-hidden="true" class="icon">
+          <span class="docon docon-sharing">
+          </span>
+         </span>
+         <span class="is-visually-hidden-touch is-hidden-portrait">
+          Share
+         </span>
+        </button>
+        <div class="dropdown-menu has-padding-small" id="sharing-menu">
+         <ul data-bi-name="share-links">
+          <li>
+           <a class="button is-text is-fullwidth justify-content-flex-start has-inner-focus is-small share-twitter" data-bi-name="twitter">
+            <span class="icon">
+             <span aria-hidden="true" class="docon docon-brand-twitter has-text-primary">
+             </span>
+            </span>
+            <span>
+             Twitter
+            </span>
+           </a>
+          </li>
+          <li>
+           <a class="button is-text is-fullwidth justify-content-flex-start has-inner-focus is-small share-linkedin" data-bi-name="linkedin">
+            <span class="icon">
+             <span aria-hidden="true" class="docon docon-brand-linkedin has-text-primary">
+             </span>
+            </span>
+            <span>
+             LinkedIn
+            </span>
+           </a>
+          </li>
+          <li>
+           <a class="button is-text is-fullwidth justify-content-flex-start has-inner-focus is-small share-facebook" data-bi-name="facebook">
+            <span class="icon">
+             <span aria-hidden="true" class="docon docon-brand-facebook has-text-primary">
+             </span>
+            </span>
+            <span>
+             Facebook
+            </span>
+           </a>
+          </li>
+          <li>
+           <a class="button is-text is-fullwidth justify-content-flex-start has-inner-focus is-small share-email" data-bi-name="email">
+            <span class="icon">
+             <span aria-hidden="true" class="docon docon-mail-message-fill has-text-primary">
+             </span>
+            </span>
+            <span>
+             Email
+            </span>
+           </a>
+          </li>
+         </ul>
+        </div>
+       </div>
+      </li>
+     </ul>
+     <button aria-label="Contents" class="border contents-button button is-small is-text is-hidden-tablet has-inner-focus" data-bi-name="contents-expand" type="button">
+      <span class="icon">
+       <span aria-hidden="true" class="docon docon-editor-list-bullet">
+       </span>
+      </span>
+      <span class="contents-expand-title">
+       Table of contents
+      </span>
+     </button>
+     <div class="is-invisible">
+     </div>
+     <div class="is-hidden-tablet level-item is-flexible level-right">
+      <button aria-label="Page Actions" class="page-actions-button button is-small is-text is-hidden-tablet has-inner-focus border is-full-height has-margin-left-small" data-bi-name="pageactions" type="button">
+       <span class="icon">
+        <span aria-hidden="true" class="docon docon-more-vertical">
+        </span>
+       </span>
+      </button>
+     </div>
+    </div>
+   </div>
+   <div class="has-overflow-hidden has-default-focus" id="disclaimer-holder">
+    <!-- liquid-tag banners sectional -->
+   </div>
+  </div>
+  <div class="mainContainer uhf-container has-top-padding has-default-focus" data-bi-name="body">
+   <div class="columns has-large-gaps is-gapless-mobile">
+    <div class="left-container is-hidden-mobile column is-one-third-tablet is-one-quarter-desktop" id="left-container">
+     <nav aria-label="Primary" class="position-fixed display-flex flex-direction-column" id="affixed-left-container" role="navigation">
+     </nav>
+    </div>
+    <!-- .primary-holder -->
+    <section class="primary-holder column is-two-thirds-tablet is-three-quarters-desktop">
+     <!--div.columns -->
+     <div class="columns is-gapless-mobile has-large-gaps">
+      <div class="column is-full is-four-fifths-desktop" id="main-column">
+       <main class="content" data-bi-name="content" dir="ltr" id="main" lang="en-us" role="main">
+        <h1 id="latest-updates-for-microsoft-sql-server">
+         Latest updates for Microsoft SQL Server
+        </h1>
+        <ul class="metadata page-metadata" data-bi-name="page info" dir="ltr" lang="en-us">
+         <li>
+          <time aria-label="Article review date" class="is-invisible" data-article-date="" data-article-date-source="ms.date" datetime="2021-03-29T00:00:00.000Z">
+           03/29/2021
+          </time>
+         </li>
+         <li class="readingTime">
+          2 minutes to read
+         </li>
+         <li class="contributors-holder">
+          <ul class="facepile has-margin-left-none is-small" data-bi-name="contributors">
+           <li class="facepile-item">
+            <a aria-label="SrinivasSQLMSGithub profile" class="facepile-item-coin" data-contributor-name="SrinivasSQLMS" data-src="https://github.com/SrinivasSQLMS.png?size=32" href="https://github.com/SrinivasSQLMS" title="SrinivasSQLMS">
+             <img aria-hidden="true" class="facepile-item-coin-image durable-image" onerror="this.className='facepile-item-coin-image durable-image has-error';" role="presentation" src="https://github.com/SrinivasSQLMS.png?size=32"/>
+             <span aria-hidden="true" class="facepile-item-coin-text durable-image-fallback facepile-item-teal">
+              S
+             </span>
+            </a>
+           </li>
+           <li class="facepile-item">
+            <a aria-label="Hristina-sqlGithub profile" class="facepile-item-coin" data-contributor-name="Hristina-sql" data-src="https://github.com/Hristina-sql.png?size=32" href="https://github.com/Hristina-sql" title="Hristina-sql">
+             <img aria-hidden="true" class="facepile-item-coin-image durable-image" onerror="this.className='facepile-item-coin-image durable-image has-error';" role="presentation" src="https://github.com/Hristina-sql.png?size=32"/>
+             <span aria-hidden="true" class="facepile-item-coin-text durable-image-fallback facepile-item-red">
+              H
+             </span>
+            </a>
+           </li>
+           <li class="facepile-item">
+            <a aria-label="MikeRayMSFTGithub profile" class="facepile-item-coin" data-contributor-name="MikeRayMSFT" data-src="https://github.com/MikeRayMSFT.png?size=32" href="https://github.com/MikeRayMSFT" title="MikeRayMSFT">
+             <img aria-hidden="true" class="facepile-item-coin-image durable-image" onerror="this.className='facepile-item-coin-image durable-image has-error';" role="presentation" src="https://github.com/MikeRayMSFT.png?size=32"/>
+             <span aria-hidden="true" class="facepile-item-coin-text durable-image-fallback facepile-item-blue">
+              M
+             </span>
+            </a>
+           </li>
+           <li class="facepile-item">
+            <a aria-label="tmichael-msGithub profile" class="facepile-item-coin" data-contributor-name="tmichael-ms" data-src="https://github.com/tmichael-ms.png?size=32" href="https://github.com/tmichael-ms" title="tmichael-ms">
+             <img aria-hidden="true" class="facepile-item-coin-image durable-image" onerror="this.className='facepile-item-coin-image durable-image has-error';" role="presentation" src="https://github.com/tmichael-ms.png?size=32"/>
+             <span aria-hidden="true" class="facepile-item-coin-text durable-image-fallback facepile-item-teal">
+              t
+             </span>
+            </a>
+           </li>
+           <li class="facepile-item">
+            <a aria-label="DCtheGeekGithub profile" class="facepile-item-coin" data-contributor-name="DCtheGeek" data-src="https://github.com/DCtheGeek.png?size=32" href="https://github.com/DCtheGeek" title="DCtheGeek">
+             <img aria-hidden="true" class="facepile-item-coin-image durable-image" onerror="this.className='facepile-item-coin-image durable-image has-error';" role="presentation" src="https://github.com/DCtheGeek.png?size=32"/>
+             <span aria-hidden="true" class="facepile-item-coin-text durable-image-fallback facepile-item-red">
+              D
+             </span>
+            </a>
+           </li>
+           <li class="facepile-item">
+            <button aria-label="View all contributors" class="facepile-item-more" title="View all contributors">
+             <div aria-hidden="true" class="facepile-item-coin">
+              <span aria-hidden="true" class="facepile-item-coin-text">
+               +7
+              </span>
+             </div>
+            </button>
+           </li>
+          </ul>
+         </li>
+        </ul>
+        <nav aria-label="Article Outline" class="doc-outline is-hidden-desktop" data-bi-name="intopic toc" id="center-doc-outline" role="navigation">
+         <h3>
+          In this article
+         </h3>
+        </nav>
+        <!-- <content> -->
+        <p>
+         <strong>
+          Applies to:
+         </strong>
+         <img alt="yes" data-linktype="relative-path" src="../../includes/media/yes-icon.png?view=sql-server-ver15"/>
+         SQL Server (all supported versions)
+        </p>
+        <p>
+         This article lists the latest updates for SQL Server products. Follow the
+         <a data-linktype="external" href="https://aka.ms/sqlreleases">
+          SQL Server Release Blog
+         </a>
+         to receive information about updates and to download the updates.
+        </p>
+        <p>
+         For more information about which products are supported please consult the
+         <a data-linktype="absolute-path" href="/en-us/lifecycle/products/?terms=sql">
+          Microsoft Product Lifecycle Page
+         </a>
+         .
+        </p>
+        <h2 id="latest-updates">
+         Latest updates
+        </h2>
+        <p>
+         Each of the following links provides information for all of the applicable products and technologies.
+        </p>
+        <table>
+         <thead>
+          <tr>
+           <th>
+            Product Versions
+           </th>
+           <th>
+            Latest Service Pack
+           </th>
+           <th>
+            Latest GDR
+           </th>
+           <th>
+            Latest cumulative update
+           </th>
+           <th>
+            CU Release Date
+           </th>
+           <th>
+            General Guidance
+           </th>
+          </tr>
+         </thead>
+         <tbody>
+          <tr>
+           <td>
+            SQL Server 2019
+           </td>
+           <td>
+            N/A
+           </td>
+           <td>
+            <a data-linktype="external" href="https://support.microsoft.com/help/4583458">
+             KB 4583458
+            </a>
+           </td>
+           <td>
+            CU 10
+            <a data-linktype="external" href="https://support.microsoft.com/help/5001090">
+             (KB 5001090)
+            </a>
+           </td>
+           <td>
+            4/6/2021
+           </td>
+           <td>
+            <a data-linktype="relative-path" href="install-sql-server?view=sql-server-ver15">
+             SQL Server 2019 Installation
+            </a>
+           </td>
+          </tr>
+          <tr>
+           <td>
+            SQL Server 2017
+           </td>
+           <td>
+            N/A
+           </td>
+           <td>
+            <a data-linktype="external" href="https://support.microsoft.com/help/4583456">
+             KB 4583456
+            </a>
+           </td>
+           <td>
+            CU 24
+            <a data-linktype="external" href="https://support.microsoft.com/help/5001228">
+             (KB 5001228)
+            </a>
+           </td>
+           <td>
+            5/10/2021
+           </td>
+           <td>
+            <a data-linktype="relative-path" href="install-sql-server?view=sql-server-ver15">
+             SQL Server 2017 Installation
+            </a>
+           </td>
+          </tr>
+          <tr>
+           <td>
+            SQL Server 2016
+           </td>
+           <td>
+            SP2
+            <a data-linktype="external" href="https://support.microsoft.com/help/4052908">
+             (KB 4052908)
+            </a>
+           </td>
+           <td>
+            <a data-linktype="external" href="https://support.microsoft.com/help/4583460">
+             KB 4583460
+            </a>
+           </td>
+           <td>
+            CU 17
+            <a data-linktype="external" href="https://support.microsoft.com/kb/5001092">
+             (KB 5001092)
+            </a>
+           </td>
+           <td>
+            3/29/2021
+           </td>
+           <td>
+            <a data-linktype="relative-path" href="install-sql-server?view=sql-server-ver15">
+             SQL Server 2016 Installation
+            </a>
+           </td>
+          </tr>
+          <tr>
+           <td>
+            SQL Server 2016
+           </td>
+           <td>
+            SP1
+            <a data-linktype="external" href="https://support.microsoft.com/help/3182545/sql-server-2016-service-pack-1-release-information">
+             (KB 3182545)
+            </a>
+           </td>
+           <td>
+            <a data-linktype="external" href="https://support.microsoft.com/help/4505219">
+             KB 4505219
+            </a>
+           </td>
+           <td>
+            CU 15 + GDR
+            <a data-linktype="external" href="https://support.microsoft.com/help/4505221">
+             (KB 4505221)
+            </a>
+           </td>
+           <td>
+            7/9/2019
+           </td>
+           <td>
+            <a data-linktype="relative-path" href="install-sql-server?view=sql-server-ver15">
+             SQL Server 2016 Installation
+            </a>
+           </td>
+          </tr>
+          <tr>
+           <td>
+            SQL Server 2016
+           </td>
+           <td>
+            N/A
+           </td>
+           <td>
+            <a data-linktype="external" href="https://support.microsoft.com/help/4058560">
+             KB4058560
+            </a>
+           </td>
+           <td>
+            CU 9
+            <a data-linktype="external" href="https://support.microsoft.com/help/4058559">
+             (KB 4058559)
+            </a>
+           </td>
+           <td>
+            11/22/2017
+           </td>
+           <td>
+            <a data-linktype="relative-path" href="install-sql-server?view=sql-server-ver15">
+             SQL Server 2016 Installation
+            </a>
+           </td>
+          </tr>
+          <tr>
+           <td>
+            SQL Server 2014
+           </td>
+           <td>
+            SP3
+            <a data-linktype="external" href="https://support.microsoft.com/kb/4022619">
+             (KB 4022619)
+            </a>
+           </td>
+           <td>
+            <a data-linktype="external" href="https://support.microsoft.com/help/4583463">
+             KB 4583463
+            </a>
+           </td>
+           <td>
+            CU 4
+            <a data-linktype="external" href="https://support.microsoft.com/kb/4583462">
+             (KB 4583462)
+            </a>
+           </td>
+           <td>
+            1/12/2021
+           </td>
+           <td>
+            <a data-linktype="external" href="https://www.microsoft.com/download/details.aspx?id=42299">
+             SQL Server 2014 Installation
+            </a>
+           </td>
+          </tr>
+          <tr>
+           <td>
+            SQL Server 2014
+           </td>
+           <td>
+            SP2
+            <a data-linktype="external" href="https://support.microsoft.com/kb/3171021">
+             (KB 3171021)
+            </a>
+           </td>
+           <td>
+            <a data-linktype="external" href="https://support.microsoft.com/help/4505217">
+             KB 4505217
+            </a>
+           </td>
+           <td>
+            CU 18
+            <a data-linktype="external" href="https://support.microsoft.com/kb/4500180">
+             (KB 4500180)
+            </a>
+           </td>
+           <td>
+            7/29/2019
+           </td>
+           <td>
+            <a data-linktype="external" href="https://www.microsoft.com/download/details.aspx?id=42299">
+             SQL Server 2014 Installation
+            </a>
+           </td>
+          </tr>
+          <tr>
+           <td>
+            SQL Server 2014
+           </td>
+           <td>
+            SP1
+            <a data-linktype="external" href="https://support.microsoft.com/kb/3058865">
+             (KB 3058865)
+            </a>
+           </td>
+           <td>
+            <a data-linktype="external" href="https://support.microsoft.com/help/4032542/description-of-the-security-update-for-sql-server-2014-service-pack-1">
+             KB 4032542
+            </a>
+           </td>
+           <td>
+            CU 13
+            <a data-linktype="external" href="https://support.microsoft.com/help/4019099">
+             (KB 4019099)
+            </a>
+           </td>
+           <td>
+            8/8/2017
+           </td>
+           <td>
+            <a data-linktype="external" href="https://www.microsoft.com/download/details.aspx?id=42299">
+             SQL Server 2014 Installation
+            </a>
+           </td>
+          </tr>
+          <tr>
+           <td>
+            SQL Server 2014
+           </td>
+           <td>
+            N/A
+           </td>
+           <td>
+            <a data-linktype="absolute-path" href="/en-us/security-updates/SecurityBulletins/2015/ms15-058">
+             MS 15-058
+            </a>
+           </td>
+           <td>
+            CU 14
+            <a data-linktype="external" href="https://support.microsoft.com/kb/3158271">
+             (KB 3158271)
+            </a>
+           </td>
+           <td>
+            6/20/2016
+           </td>
+           <td>
+            <a data-linktype="external" href="https://www.microsoft.com/download/details.aspx?id=42299">
+             SQL Server 2014 Installation
+            </a>
+           </td>
+          </tr>
+          <tr>
+           <td>
+            SQL Server 2012
+           </td>
+           <td>
+            SP4
+            <a data-linktype="external" href="https://support.microsoft.com/help/4018073/sql-server-2012-service-pack-4-release-information">
+             (KB 4018073)
+            </a>
+           </td>
+           <td>
+            <a data-linktype="external" href="https://support.microsoft.com/help/4583465">
+             KB 4583465
+            </a>
+           </td>
+           <td>
+            N/A
+           </td>
+           <td>
+            N/A
+           </td>
+           <td>
+            <a data-linktype="absolute-path" href="/en-us/previous-versions/sql/sql-server-2012/cc281837(v=sql.110)">
+             SQL Server 2012 Installation
+            </a>
+           </td>
+          </tr>
+          <tr>
+           <td>
+            SQL Server 2012
+           </td>
+           <td>
+            SP3
+            <a data-linktype="external" href="https://support.microsoft.com/help/3072779/sql-server-2012-service-pack-3-release-information">
+             (KB 3072779)
+            </a>
+           </td>
+           <td>
+            <a data-linktype="external" href="https://support.microsoft.com/help/4057115">
+             KB 4057115
+            </a>
+           </td>
+           <td>
+            CU 10
+            <a data-linktype="external" href="https://support.microsoft.com/help/4057121">
+             (KB 4057121)
+            </a>
+           </td>
+           <td>
+            8/8/2017
+           </td>
+           <td>
+            <a data-linktype="absolute-path" href="/en-us/previous-versions/sql/sql-server-2012/cc281837(v=sql.110)">
+             SQL Server 2012 Installation
+            </a>
+           </td>
+          </tr>
+          <tr>
+           <td>
+            SQL Server 2012
+           </td>
+           <td>
+            SP2
+            <a data-linktype="external" href="https://support.microsoft.com/kb/2958429">
+             (KB 2958429)
+            </a>
+           </td>
+           <td>
+            <a data-linktype="absolute-path" href="/en-us/security-updates/SecurityBulletins/2016/ms16-136">
+             MS 16-136
+            </a>
+           </td>
+           <td>
+            CU 16
+            <a data-linktype="external" href="https://support.microsoft.com/help/3205054/cumulative-update-16-for-sql-server-2012-sp2">
+             (KB 3205054)
+            </a>
+           </td>
+           <td>
+            1/18/2017
+           </td>
+           <td>
+            <a data-linktype="absolute-path" href="/en-us/previous-versions/sql/sql-server-2012/cc281837(v=sql.110)">
+             SQL Server 2012 Installation
+            </a>
+           </td>
+          </tr>
+          <tr>
+           <td>
+            SQL Server 2012
+           </td>
+           <td>
+            SP1
+            <a data-linktype="external" href="https://support.microsoft.com/kb/2674319">
+             (KB 2674319)
+            </a>
+           </td>
+           <td>
+            <a data-linktype="absolute-path" href="/en-us/security-updates/SecurityBulletins/2015/ms15-058">
+             MS 15-058
+            </a>
+           </td>
+           <td>
+            CU 16
+            <a data-linktype="external" href="https://support.microsoft.com/kb/3052476">
+             (KB 3052476)
+            </a>
+           </td>
+           <td>
+            5/18/2015
+           </td>
+           <td>
+            <a data-linktype="absolute-path" href="/en-us/previous-versions/sql/sql-server-2012/cc281837(v=sql.110)">
+             SQL Server 2012 Installation
+            </a>
+           </td>
+          </tr>
+          <tr>
+           <td>
+            SQL Server 2008 R2
+           </td>
+           <td>
+            SP3
+            <a data-linktype="external" href="https://support.microsoft.com/kb/2979597">
+             (KB 2979597)
+            </a>
+           </td>
+           <td>
+            <a data-linktype="external" href="https://support.microsoft.com/help/4057113/security-update-for-vulnerabilities-in-sql-server">
+             KB 4057113
+            </a>
+           </td>
+           <td>
+            N/A
+           </td>
+           <td>
+            N/A
+           </td>
+           <td>
+            <a data-linktype="external" href="https://www.microsoft.com/download/details.aspx?id=44271">
+             SQL Server 2008 R2 SP3 Installation
+            </a>
+           </td>
+          </tr>
+          <tr>
+           <td>
+            SQL Server 2008 R2
+           </td>
+           <td>
+            SP2
+            <a data-linktype="external" href="https://support.microsoft.com/kb/2630458">
+             (KB 2630458)
+            </a>
+           </td>
+           <td>
+            <a data-linktype="absolute-path" href="/en-us/security-updates/SecurityBulletins/2015/ms15-058">
+             MS 15-058
+            </a>
+           </td>
+           <td>
+            CU 13
+            <a data-linktype="external" href="https://support.microsoft.com/kb/2967540">
+             (KB 2967540)
+            </a>
+           </td>
+           <td>
+            6/30/2014
+           </td>
+           <td>
+            <a data-linktype="external" href="https://www.microsoft.com/download/details.aspx?id=30437">
+             SQL Server 2008 R2 SP2 Installation
+            </a>
+           </td>
+          </tr>
+          <tr>
+           <td>
+            SQL Server 2008
+           </td>
+           <td>
+            SP4
+            <a data-linktype="external" href="https://support.microsoft.com/kb/2979596">
+             (KB 2979596)
+            </a>
+           </td>
+           <td>
+            <a data-linktype="external" href="https://support.microsoft.com/help/4057114/security-update-for-vulnerabilities-in-sql-server">
+             4057114
+            </a>
+           </td>
+           <td>
+            N/A
+           </td>
+           <td>
+            N/A
+           </td>
+           <td>
+            <a data-linktype="absolute-path" href="/en-us/previous-versions/sql/sql-server-2008/dd638062(v=sql.100)">
+             SQL Server 2008 Servicing
+            </a>
+           </td>
+          </tr>
+          <tr>
+           <td>
+            SQL Server 2008
+           </td>
+           <td>
+            SP3
+            <a data-linktype="external" href="https://support.microsoft.com/kb/2546951">
+             (KB 2546951)
+            </a>
+           </td>
+           <td>
+            <a data-linktype="absolute-path" href="/en-us/security-updates/SecurityBulletins/2015/ms15-058">
+             MS 15-058
+            </a>
+           </td>
+           <td>
+            CU 17
+            <a data-linktype="external" href="https://support.microsoft.com/kb/2958696">
+             (KB 2958696)
+            </a>
+           </td>
+           <td>
+            5/19/2014
+           </td>
+           <td>
+            <a data-linktype="absolute-path" href="/en-us/previous-versions/sql/sql-server-2008/dd638062(v=sql.100)">
+             SQL Server 2008 Servicing
+            </a>
+           </td>
+          </tr>
+         </tbody>
+        </table>
+        <p>
+         <strong>
+          Learn how to test updates:
+         </strong>
+         Â
+         <a data-linktype="external" href="https://msdnshared.blob.core.windows.net/media/TNBlogsFS/prod.evol.blogs.technet.com/CommunityServer.Blogs.Components.WeblogFiles/00/00/00/85/48/Files/0827.Testing%20And%20Developing%20Supportability%20Roadmaps%20for%20ISV%20Applications.pdf">
+          Testing and Developing Supportability Roadmaps for ISV Applications (PDF)
+         </a>
+        </p>
+        <h2 id="sql-server-2019-servicing-updates">
+         SQL Server 2019 servicing updates
+        </h2>
+        <p>
+         For current information about SQL Server servicing updates, see
+         <a data-linktype="external" href="https://support.microsoft.com/help/4518398">
+          https://support.microsoft.com/help/4518398
+         </a>
+         .
+        </p>
+        <h2 id="knowledge-base">
+         Knowledge base
+        </h2>
+        <ul>
+         <li>
+          KB 935897:
+          <a data-linktype="external" href="https://support.microsoft.com/kb/935897">
+           An Incremental Servicing Model is available from the SQL Server team to deliver hotfixes for reported problems
+          </a>
+         </li>
+         <li>
+          KB 824684:
+          <a data-linktype="external" href="https://support.microsoft.com/kb/824684">
+           Description of the standard terminology that is used to describe Microsoft software updates
+          </a>
+         </li>
+         <li>
+          KB 822499:
+          <a data-linktype="external" href="https://support.microsoft.com/kb/822499">
+           Naming schema for Microsoft SQL Server software update packages
+          </a>
+         </li>
+         <li>
+          KB 321185:
+          <a data-linktype="external" href="https://support.microsoft.com/kb/321185">
+           How to determine the version and edition of SQL Server and its components
+          </a>
+         </li>
+        </ul>
+        <h2 id="additional-resources">
+         Additional resources
+        </h2>
+        <ul>
+         <li>
+          <a data-linktype="relative-path" href="../../sql-server/?view=sql-server-ver15">
+           SQL Server documentation
+          </a>
+         </li>
+         <li>
+          <a data-linktype="external" href="https://www.microsoft.com/sqlserver/default.aspx">
+           SQL Server product information center
+          </a>
+         </li>
+         <li>
+          <a data-linktype="external" href="https://aka.ms/sqlreleases">
+           SQL Server release blogs
+          </a>
+         </li>
+         <li>
+          <a data-linktype="external" href="https://support.microsoft.com/help/321185/how-to-determine-the-version-edition-and-update-level-of-sql-server-an">
+           How to determine the version, edition, and update level of SQL Server and its components
+          </a>
+         </li>
+        </ul>
+        <!-- </content> -->
+       </main>
+       <!-- page rating section -->
+       <div class="is-hidden-desktop border-top has-margin-top-large has-padding-top-large binary-rating-holder">
+        <div class="feedback-verbatim border-bottom has-padding-bottom-large has-margin-bottom-small" data-bi-name="rating">
+         <div class="binary-rating">
+          <div class="binary-rating-buttons">
+           <h3 class="font-weight-semibold has-margin-top-none has-margin-bottom-small font-size-h4 has-margin-bottom-medium">
+            Is this page helpful?
+           </h3>
+           <div>
+            <button aria-controls="rating-container-desktop" aria-expanded="false" class="thumb-rating like has-inner-focus" data-bi-name="rating-yes" data-bi-sat="1" title="Yes">
+             <span aria-hidden="true" class="icon docon docon-like">
+             </span>
+             <span>
+              Yes
+             </span>
+            </button>
+            <button aria-controls="rating-container-desktop" aria-expanded="false" class="thumb-rating dislike has-inner-focus" data-bi-name="rating-no" data-bi-sat="0" title="No">
+             <span aria-hidden="true" class="icon docon docon-dislike">
+             </span>
+             <span>
+              No
+             </span>
+            </button>
+           </div>
+          </div>
+          <form class="feedback-verbatim-form is-hidden" id="rating-container-desktop">
+           <div class="verbatim-textarea box position-relative box-shadow-none border has-margin-top-small has-padding-extra-small font-size-xs">
+            <label class="visually-hidden" for="rating-textarea-desktop">
+             Any additional feedback?
+            </label>
+            <textarea class="textarea border-none box-shadow-none has-inner-focus" id="rating-textarea-desktop" maxlength="999" placeholder="Any additional feedback?" required="" rows="4"></textarea>
+           </div>
+           <p class="font-size-xs has-line-height-reset">
+            Feedback will be sent to Microsoft: By pressing the submit button, your feedback will be used to improve Microsoft products and services.
+            <a href="https://privacy.microsoft.com/en-us/privacystatement">
+             Privacy policy.
+            </a>
+           </p>
+           <div class="buttons is-right margin-top-xs has-margin-right-extra-small">
+            <button class="skip-rating button is-transparent has-text-primary is-small border-none" type="button">
+             Skip
+            </button>
+            <button class="submit-rating button is-primary is-small" data-bi-name="rating-verbatim" disabled="" type="submit">
+             Submit
+            </button>
+           </div>
+          </form>
+         </div>
+         <div class="thankyou-rating is-hidden" tabindex="-1">
+          <p>
+           Thank you.
+          </p>
+         </div>
+        </div>
+       </div>
+       <!-- end page rating section -->
+       <!-- recommendations section -->
+       <section data-bi-name="recommendations" id="recommendations-section">
+       </section>
+       <!-- end recommendations section -->
+       <!-- feedback section -->
+       <section class="feedback-section position-relative" data-bi-name="feedback-section">
+        <h2 class="title is-3 has-margin-top-large" id="feedback">
+         Feedback
+        </h2>
+        <div class="alert choose-feedback-type">
+         <p aria-hidden="true" id="send-feedback-about">
+          Submit and view feedback for
+         </p>
+         <div class="choose-feedback-buttons margin-top-xs">
+          <a aria-label="Send feedback about this product" class="button has-external-link-indicator feedback-type-product has-margin-bottom-small" data-bi-name="product-feedback" href="https://feedback.azure.com/forums/908035-sql-server/">
+           <span>
+            This product
+           </span>
+          </a>
+          <a aria-label="Send feedback about this page" class="button feedback-type-product has-margin-bottom-small github-link" data-bi-name="create-issue-on-github">
+           <span aria-hidden="true" class="docon docon-brand-github has-padding-right-extra-small">
+           </span>
+           <span>
+            This page
+           </span>
+          </a>
+         </div>
+        </div>
+        <div class="action-container display-flex justify-content-flex-end has-margin-top-small has-margin-bottom-small">
+         <a class="view-on-github has-external-link-indicator" data-bi-name="view-on-github" href="https://github.com/MicrosoftDocs/sql-docs/issues">
+          <span aria-hidden="true" class="docon docon-brand-github">
+          </span>
+          <span>
+           View all page feedback
+          </span>
+         </a>
+        </div>
+       </section>
+       <!-- end feedback section -->
+       <!-- feedback report section -->
+       <!-- end feedback report section -->
+       <div class="border-top is-visible-interactive has-default-focus has-margin-top-large">
+        <footer class="footer-layout" data-bi-name="footer" id="footer-interactive">
+         <div class="display-flex is-full-height has-padding-right-extra-large-desktop">
+          <a class="locale-selector-link flex-shrink-0" data-bi-name="select-locale" data-mscc-ic="false" href="#">
+           <span aria-hidden="true" class="icon docon docon-world font-size-l has-margin-right-small">
+           </span>
+           <span class="local-selector-link-text">
+           </span>
+          </a>
+          <div class="has-margin-left-medium has-margin-right-medium flex-shrink-0">
+           <div class="dropdown has-caret-up">
+            <button aria-controls="theme-menu-interactive" aria-expanded="false" class="dropdown-trigger button is-transparent is-small is-icon-only-touch has-inner-focus theme-dropdown-trigger" data-bi-name="theme" title="Theme">
+             <span class="icon">
+              <span aria-hidden="true" class="docon docon-sun">
+              </span>
+             </span>
+             <span>
+              Theme
+             </span>
+            </button>
+            <div class="dropdown-menu" id="theme-menu-interactive" role="menu">
+             <ul class="theme-selector has-padding-small">
+              <li class="theme is-block">
+               <button class="button is-text is-small theme-control is-fullwidth justify-content-flex-start" data-theme-to="light">
+                <span class="theme-light has-margin-right-small">
+                 <span aria-hidden="true" class="theme-selector-icon css-variable-support border is-inline-block has-body-background">
+                  <svg class="svg" viewbox="0 0 22 14" xmlns="http://www.w3.org/2000/svg">
+                   <rect class="has-fill-body-background" height="14" width="22">
+                   </rect>
+                   <rect class="has-fill-secondary" height="4" width="12" x="5" y="5">
+                   </rect>
+                   <rect class="has-fill-secondary" height="1" width="2" x="5" y="2">
+                   </rect>
+                   <rect class="has-fill-secondary" height="1" width="2" x="8" y="2">
+                   </rect>
+                   <rect class="has-fill-secondary" height="1" width="3" x="11" y="2">
+                   </rect>
+                   <rect class="has-fill-secondary" height="2" width="2" x="1" y="1">
+                   </rect>
+                   <rect class="has-fill-primary" height="2" rx="0.3" width="7" x="5" y="10">
+                   </rect>
+                   <rect class="has-fill-secondary" height="2" rx="1" width="2" x="19" y="1">
+                   </rect>
+                  </svg>
+                 </span>
+                </span>
+                <span role="menuitem">
+                 Light
+                </span>
+               </button>
+              </li>
+              <li class="theme is-block">
+               <button class="button is-text is-small theme-control is-fullwidth justify-content-flex-start" data-theme-to="dark">
+                <span class="theme-dark has-margin-right-small">
+                 <span aria-hidden="true" class="border theme-selector-icon css-variable-support is-inline-block has-body-background">
+                  <svg class="svg" viewbox="0 0 22 14" xmlns="http://www.w3.org/2000/svg">
+                   <rect class="has-fill-body-background" height="14" width="22">
+                   </rect>
+                   <rect class="has-fill-secondary" height="4" width="12" x="5" y="5">
+                   </rect>
+                   <rect class="has-fill-secondary" height="1" width="2" x="5" y="2">
+                   </rect>
+                   <rect class="has-fill-secondary" height="1" width="2" x="8" y="2">
+                   </rect>
+                   <rect class="has-fill-secondary" height="1" width="3" x="11" y="2">
+                   </rect>
+                   <rect class="has-fill-secondary" height="2" width="2" x="1" y="1">
+                   </rect>
+                   <rect class="has-fill-primary" height="2" rx="0.3" width="7" x="5" y="10">
+                   </rect>
+                   <rect class="has-fill-secondary" height="2" rx="1" width="2" x="19" y="1">
+                   </rect>
+                  </svg>
+                 </span>
+                </span>
+                <span role="menuitem">
+                 Dark
+                </span>
+               </button>
+              </li>
+              <li class="theme is-block">
+               <button class="button is-text is-small theme-control is-fullwidth justify-content-flex-start" data-theme-to="high-contrast">
+                <span class="theme-high-contrast has-margin-right-small">
+                 <span aria-hidden="true" class="border theme-selector-icon css-variable-support is-inline-block has-body-background">
+                  <svg class="svg" viewbox="0 0 22 14" xmlns="http://www.w3.org/2000/svg">
+                   <rect class="has-fill-body-background" height="14" width="22">
+                   </rect>
+                   <rect class="has-fill-secondary" height="4" width="12" x="5" y="5">
+                   </rect>
+                   <rect class="has-fill-secondary" height="1" width="2" x="5" y="2">
+                   </rect>
+                   <rect class="has-fill-secondary" height="1" width="2" x="8" y="2">
+                   </rect>
+                   <rect class="has-fill-secondary" height="1" width="3" x="11" y="2">
+                   </rect>
+                   <rect class="has-fill-secondary" height="2" width="2" x="1" y="1">
+                   </rect>
+                   <rect class="has-fill-primary" height="2" rx="0.3" width="7" x="5" y="10">
+                   </rect>
+                   <rect class="has-fill-secondary" height="2" rx="1" width="2" x="19" y="1">
+                   </rect>
+                  </svg>
+                 </span>
+                </span>
+                <span role="menuitem">
+                 High contrast
+                </span>
+               </button>
+              </li>
+             </ul>
+            </div>
+           </div>
+          </div>
+         </div>
+         <ul class="links" data-bi-name="footerlinks">
+          <li class="manage-cookies-holder" hidden="">
+          </li>
+          <li>
+           <a data-bi-name="archivelink" data-mscc-ic="false" href="https://docs.microsoft.com/en-us/previous-versions/">
+            Previous Version Docs
+           </a>
+          </li>
+          <li>
+           <a data-bi-name="bloglink" data-mscc-ic="false" href="https://docs.microsoft.com/en-us/teamblog">
+            Blog
+           </a>
+          </li>
+          <li>
+           <a data-bi-name="contributorGuide" data-mscc-ic="false" href="https://docs.microsoft.com/en-us/contribute">
+            Contribute
+           </a>
+          </li>
+          <li>
+           <a data-bi-name="privacy" data-mscc-ic="false" href="https://go.microsoft.com/fwlink/?LinkId=521839">
+            Privacy &amp; Cookies
+           </a>
+          </li>
+          <li>
+           <a data-bi-name="termsofuse" data-mscc-ic="false" href="https://docs.microsoft.com/en-us/legal/termsofuse">
+            Terms of Use
+           </a>
+          </li>
+          <li>
+           <a data-bi-name="trademarks" data-mscc-ic="false" href="https://www.microsoft.com/en-us/legal/intellectualproperty/Trademarks/EN-US.aspx">
+            Trademarks
+           </a>
+          </li>
+          <li>
+           © Microsoft 2021
+          </li>
+         </ul>
+        </footer>
+       </div>
+      </div>
+      <div aria-label="Page Actions" class="font-size-s right-container column is-one-quarter is-one-fifth-desktop is-hidden-mobile is-hidden-tablet-only" data-bi-name="pageactions" role="complementary">
+       <div class="doc-outline position-fixed is-vertically-scrollable" id="affixed-right-container">
+        <div class="feedback-verbatim border-bottom has-padding-bottom-small has-margin-bottom-small" data-bi-name="rating">
+         <div class="binary-rating">
+          <div class="binary-rating-buttons">
+           <h3 class="font-weight-semibold has-margin-top-none has-margin-bottom-small">
+            Is this page helpful?
+           </h3>
+           <div>
+            <button aria-controls="rating-container-mobile" aria-expanded="false" class="thumb-rating like has-inner-focus" data-bi-name="rating-yes" data-bi-sat="1" title="Yes">
+             <span aria-hidden="true" class="icon docon docon-like">
+             </span>
+             <span>
+              Yes
+             </span>
+            </button>
+            <button aria-controls="rating-container-mobile" aria-expanded="false" class="thumb-rating dislike has-inner-focus" data-bi-name="rating-no" data-bi-sat="0" title="No">
+             <span aria-hidden="true" class="icon docon docon-dislike">
+             </span>
+             <span>
+              No
+             </span>
+            </button>
+           </div>
+          </div>
+          <form class="feedback-verbatim-form is-hidden" id="rating-container-mobile">
+           <div class="verbatim-textarea box position-relative box-shadow-none border has-margin-top-small has-padding-extra-small font-size-xs">
+            <label class="visually-hidden" for="rating-textarea-mobile">
+             Any additional feedback?
+            </label>
+            <textarea class="textarea border-none box-shadow-none has-inner-focus" id="rating-textarea-mobile" maxlength="999" placeholder="Any additional feedback?" required="" rows="4"></textarea>
+           </div>
+           <p class="font-size-xs has-line-height-reset">
+            Feedback will be sent to Microsoft: By pressing the submit button, your feedback will be used to improve Microsoft products and services.
+            <a href="https://privacy.microsoft.com/en-us/privacystatement">
+             Privacy policy.
+            </a>
+           </p>
+           <div class="buttons is-right margin-top-xs has-margin-right-extra-small">
+            <button class="skip-rating button is-transparent has-text-primary is-small border-none" type="button">
+             Skip
+            </button>
+            <button class="submit-rating button is-primary is-small" data-bi-name="rating-verbatim" disabled="" type="submit">
+             Submit
+            </button>
+           </div>
+          </form>
+         </div>
+         <div class="thankyou-rating is-hidden" tabindex="-1">
+          <p>
+           Thank you.
+          </p>
+         </div>
+        </div>
+        <nav aria-label="Article Outline" data-bi-name="intopic toc" id="side-doc-outline" role="navigation">
+         <h3>
+          In this article
+         </h3>
+        </nav>
+       </div>
+      </div>
+     </div>
+     <!--end of div.columns -->
+    </section>
+    <!--end of .primary-holder -->
+    <!-- interactive container -->
+    <aside class="interactive-container is-visible-interactive column has-body-background-dark" id="interactive-container">
+    </aside>
+    <!-- end of interactive container -->
+   </div>
+  </div>
+  <!--end of .mainContainer -->
+  <section class="border-top has-default-focus is-hidden-interactive has-margin-top-large">
+   <footer class="footer-layout uhf-container has-padding" data-bi-name="footer" id="footer" role="contentinfo">
+    <div class="display-flex is-full-height has-padding-right-extra-large-desktop">
+     <a class="locale-selector-link flex-shrink-0" data-bi-name="select-locale" data-mscc-ic="false" href="#">
+      <span aria-hidden="true" class="icon docon docon-world font-size-l has-margin-right-small">
+      </span>
+      <span class="local-selector-link-text">
+      </span>
+     </a>
+     <div class="has-margin-left-medium has-margin-right-medium flex-shrink-0">
+      <div class="dropdown has-caret-up">
+       <button aria-controls="theme-menu" aria-expanded="false" class="dropdown-trigger button is-transparent is-small is-icon-only-touch has-inner-focus theme-dropdown-trigger" data-bi-name="theme" title="Theme">
+        <span class="icon">
+         <span aria-hidden="true" class="docon docon-sun">
+         </span>
+        </span>
+        <span>
+         Theme
+        </span>
+       </button>
+       <div class="dropdown-menu" id="theme-menu" role="menu">
+        <ul class="theme-selector has-padding-small">
+         <li class="theme is-block">
+          <button class="button is-text is-small theme-control is-fullwidth justify-content-flex-start" data-theme-to="light">
+           <span class="theme-light has-margin-right-small">
+            <span aria-hidden="true" class="theme-selector-icon css-variable-support border is-inline-block has-body-background">
+             <svg class="svg" viewbox="0 0 22 14" xmlns="http://www.w3.org/2000/svg">
+              <rect class="has-fill-body-background" height="14" width="22">
+              </rect>
+              <rect class="has-fill-secondary" height="4" width="12" x="5" y="5">
+              </rect>
+              <rect class="has-fill-secondary" height="1" width="2" x="5" y="2">
+              </rect>
+              <rect class="has-fill-secondary" height="1" width="2" x="8" y="2">
+              </rect>
+              <rect class="has-fill-secondary" height="1" width="3" x="11" y="2">
+              </rect>
+              <rect class="has-fill-secondary" height="2" width="2" x="1" y="1">
+              </rect>
+              <rect class="has-fill-primary" height="2" rx="0.3" width="7" x="5" y="10">
+              </rect>
+              <rect class="has-fill-secondary" height="2" rx="1" width="2" x="19" y="1">
+              </rect>
+             </svg>
+            </span>
+           </span>
+           <span role="menuitem">
+            Light
+           </span>
+          </button>
+         </li>
+         <li class="theme is-block">
+          <button class="button is-text is-small theme-control is-fullwidth justify-content-flex-start" data-theme-to="dark">
+           <span class="theme-dark has-margin-right-small">
+            <span aria-hidden="true" class="border theme-selector-icon css-variable-support is-inline-block has-body-background">
+             <svg class="svg" viewbox="0 0 22 14" xmlns="http://www.w3.org/2000/svg">
+              <rect class="has-fill-body-background" height="14" width="22">
+              </rect>
+              <rect class="has-fill-secondary" height="4" width="12" x="5" y="5">
+              </rect>
+              <rect class="has-fill-secondary" height="1" width="2" x="5" y="2">
+              </rect>
+              <rect class="has-fill-secondary" height="1" width="2" x="8" y="2">
+              </rect>
+              <rect class="has-fill-secondary" height="1" width="3" x="11" y="2">
+              </rect>
+              <rect class="has-fill-secondary" height="2" width="2" x="1" y="1">
+              </rect>
+              <rect class="has-fill-primary" height="2" rx="0.3" width="7" x="5" y="10">
+              </rect>
+              <rect class="has-fill-secondary" height="2" rx="1" width="2" x="19" y="1">
+              </rect>
+             </svg>
+            </span>
+           </span>
+           <span role="menuitem">
+            Dark
+           </span>
+          </button>
+         </li>
+         <li class="theme is-block">
+          <button class="button is-text is-small theme-control is-fullwidth justify-content-flex-start" data-theme-to="high-contrast">
+           <span class="theme-high-contrast has-margin-right-small">
+            <span aria-hidden="true" class="border theme-selector-icon css-variable-support is-inline-block has-body-background">
+             <svg class="svg" viewbox="0 0 22 14" xmlns="http://www.w3.org/2000/svg">
+              <rect class="has-fill-body-background" height="14" width="22">
+              </rect>
+              <rect class="has-fill-secondary" height="4" width="12" x="5" y="5">
+              </rect>
+              <rect class="has-fill-secondary" height="1" width="2" x="5" y="2">
+              </rect>
+              <rect class="has-fill-secondary" height="1" width="2" x="8" y="2">
+              </rect>
+              <rect class="has-fill-secondary" height="1" width="3" x="11" y="2">
+              </rect>
+              <rect class="has-fill-secondary" height="2" width="2" x="1" y="1">
+              </rect>
+              <rect class="has-fill-primary" height="2" rx="0.3" width="7" x="5" y="10">
+              </rect>
+              <rect class="has-fill-secondary" height="2" rx="1" width="2" x="19" y="1">
+              </rect>
+             </svg>
+            </span>
+           </span>
+           <span role="menuitem">
+            High contrast
+           </span>
+          </button>
+         </li>
+        </ul>
+       </div>
+      </div>
+     </div>
+    </div>
+    <ul class="links" data-bi-name="footerlinks">
+     <li class="manage-cookies-holder" hidden="">
+     </li>
+     <li>
+      <a data-bi-name="archivelink" data-mscc-ic="false" href="https://docs.microsoft.com/en-us/previous-versions/">
+       Previous Version Docs
+      </a>
+     </li>
+     <li>
+      <a data-bi-name="bloglink" data-mscc-ic="false" href="https://docs.microsoft.com/en-us/teamblog">
+       Blog
+      </a>
+     </li>
+     <li>
+      <a data-bi-name="contributorGuide" data-mscc-ic="false" href="https://docs.microsoft.com/en-us/contribute">
+       Contribute
+      </a>
+     </li>
+     <li>
+      <a data-bi-name="privacy" data-mscc-ic="false" href="https://go.microsoft.com/fwlink/?LinkId=521839">
+       Privacy &amp; Cookies
+      </a>
+     </li>
+     <li>
+      <a data-bi-name="termsofuse" data-mscc-ic="false" href="https://docs.microsoft.com/en-us/legal/termsofuse">
+       Terms of Use
+      </a>
+     </li>
+     <li>
+      <a data-bi-name="trademarks" data-mscc-ic="false" href="https://www.microsoft.com/en-us/legal/intellectualproperty/Trademarks/EN-US.aspx">
+       Trademarks
+      </a>
+     </li>
+     <li>
+      © Microsoft 2021
+     </li>
+    </ul>
+   </footer>
+  </section>
+  <div aria-label="Action Panel" class="action-panel has-default-focus" id="action-panel" role="region" tabindex="-1">
+  </div>
+ </body>
+</html>
+
