@@ -3,8 +3,8 @@
 from bs4 import BeautifulSoup
 import requests
 import csv
-
-url="https://endoflife.date/" + str(input("Give Name of product --->")).replace(" ", "")
+product = str(input("Give Name of product --->")).replace(" ", "")
+url="https://endoflife.date/" + product
 
 # Make a GET request to fetch the raw HTML content
 html_content = requests.get(url).text
@@ -43,9 +43,9 @@ try:
     # using list comprehension 
     x = [records[i:i + n] for i in range(0, len(records), n)] 
     print(x)
-
+    fileName = product+".csv"
     # opening the csv file in 'a+' mode i.e: append mode
-    file = open('g4g.csv', 'a+', newline ='')
+    file = open(fileName, 'a+', newline ='')
     
     # writing the data into the file
     with file:    
