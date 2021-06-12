@@ -1,0 +1,10 @@
+Version,Released,Security Support,Release
+"Debian 10 ""Buster""",1 year and 11 months ago (06 Jul 2019),Ends            in 2 years and 11 months (01 Jun 2024),10.9
+"Debian 9 ""Stretch""",3 years and 11 months ago (17 Jun 2017),Ended            1 year and 5 months ago (01 Jan 2020),NA
+"Debian 9 ""Stretch"" (LTS)",3 years and 11 months ago (17 Jun 2017),Ends            in 1 year (30 Jun 2022),9.12
+"Debian 8 ""Jessie""",6 years ago (26 Apr 2015),Ended            2 years and 11 months ago (17 Jun 2018),NA
+"Debian 8 ""Jessie"" (LTS)",6 years ago (26 Apr 2015),Ended            11 months ago (30 Jun 2020),NA
+"Debian 7 ""Wheezy""",8 years ago (04 May 2013),Ended            5 years ago (25 Apr 2016),NA
+"Debian 7 ""Wheezy"" (LTS)",8 years ago (04 May 2013),Ended            3 years ago (31 May 2018),NA
+"Debian 6 ""Squeeze""",10 years ago (06 Feb 2011),Ended            7 years ago (31 May 2014),NA
+"Debian 6 ""Squeeze"" (LTS)",10 years ago (06 Feb 2011),Ended            5 years ago (29 Feb 2016),NA
